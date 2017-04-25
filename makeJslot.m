@@ -1,0 +1,19 @@
+function Jslot=makeJslot(feain)
+N=18;
+Jpk=1e7;
+theta1=0;
+poles=6;
+thetaxe=feain.thetax*poles/2;
+clear Iv
+st=feain.st;
+Jslot=zeros(1,N);
+Isa=[1 0 0 -1 0 0];
+Isb=[0 -1 0 0 1 0];
+Isc=[0 0 1 0 0 -1];
+Iaslot=[Isa Isa Isa];
+Ibslot=[Isb Isb Isb];
+Icslot=[Isc Isc Isc];
+Ja=Jpk*cos(thetaxe+theta1);
+Jb=Jpk*cos(thetaxe+theta1-2*pi/3);
+Jc=Jpk*cos(thetaxe+theta1+2*pi/3);
+Jslot=Ja*Iaslot+Jb*Ibslot+Jc*Icslot;
