@@ -1,3 +1,4 @@
+%%Based on the work of Danhong, University of Pennsylvania
 function feaout=segmdl
 xx=0;
 mu0=4e-7*pi;
