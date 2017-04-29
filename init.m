@@ -1,3 +1,5 @@
+%%% Code for meshing
+
 function feaout=init(feain)
 feaout=feain;
 disp('Generating initial mesh...');
