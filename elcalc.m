@@ -1,3 +1,5 @@
+%%Code for Element Generation
+
 function elout=elcalc(elin,xn,yn,mat)
 err=1e-12;
 elout=elin;
